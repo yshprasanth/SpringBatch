@@ -21,7 +21,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.sai.sri.siddhi.batch.xmltosql.main.MainApp</mainClass>
+                            <mainClass>com.sai.sri.siddhi.batch.csvtoxml.main.MainApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -41,7 +41,7 @@
                 <configuration>
                     <includePluginDependencies>true</includePluginDependencies>
                     <includeProjectDependencies>true</includeProjectDependencies>
-                    <mainClass>com.sai.sri.siddhi.batch.xmltosql.main.MainApp</mainClass>
+                    <mainClass>com.sai.sri.siddhi.batch.csvtoxml.main.MainApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
