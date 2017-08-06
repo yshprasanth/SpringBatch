@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringBatch.iml" filepath="$PROJECT_DIR$/SpringBatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/basicBatchApp/basicBatchApp.iml" filepath="$PROJECT_DIR$/basicBatchApp/basicBatchApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/csvToXmlBatchApp/csvToXmlBatchApp.iml" filepath="$PROJECT_DIR$/csvToXmlBatchApp/csvToXmlBatchApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mysqlToXmlBatchApp/mysqlToXmlBatchApp.iml" filepath="$PROJECT_DIR$/mysqlToXmlBatchApp/mysqlToXmlBatchApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/xmlToMySqlDBBatchApp/xmlToMySqlDBBatchApp.iml" filepath="$PROJECT_DIR$/xmlToMySqlDBBatchApp/xmlToMySqlDBBatchApp.iml" />
     </modules>
   </component>

@@ -15,6 +15,7 @@
         <module>basicBatchApp</module>
         <module>xmlToMySqlDBBatchApp</module>
         <module>csvToXmlBatchApp</module>
+        <module>mysqlToXmlBatchApp</module>
     </modules>
 
     <properties>

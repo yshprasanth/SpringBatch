@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="basicBatchApp" />
         <module name="csvToXmlBatchApp" />
+        <module name="mysqlToXmlBatchApp" />
         <module name="xmlToMySqlDBBatchApp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="basicBatchApp" target="1.8" />
       <module name="csvToXmlBatchApp" target="1.8" />
+      <module name="mysqlToXmlBatchApp" target="1.8" />
       <module name="SpringBatch" target="1.8" />
       <module name="xmlToMySqlDBBatchApp" target="1.8" />
     </bytecodeTargetLevel>
