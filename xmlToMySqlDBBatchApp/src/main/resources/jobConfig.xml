@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/batch
+            http://www.springframework.org/schema/batch/spring-batch.xsd
+            http://www.springframework.org/schema/util
+            http://www.springframework.org/schema/util/spring-util.xsd">
+    <import resource="context.xml" />
+
+    <bean id="itemProcessor" class="com.sai.sri.siddhi.batch.xmltosql.processor.CustomItemProcessor" />
+
+    <bean id="xmlItemReader" class="org.springframework.batch.item.xml.StaxEventItemReader">
+        <property name="fragmentRootElementName" value="tutorial" />
+        <property name="resource" value="classpath:input.xml" />
+        <property name="unmarshaller" ref="customUnmarshaller" />
+    </bean>
+
+    <bean id="customUnmarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+        <property name="aliases">
+            <util:map id="aliases">
+                <entry key="tutorial" value="com.sai.sri.siddhi.batch.xmltosql.pojo.Tutorial"/>
+                <!--<entry key="tutorial_id" value="id" />-->
+            </util:map>
+        </property>
+    </bean>
+
+    <bean id="sqlItemWriter" class="org.springframework.batch.item.database.JdbcBatchItemWriter">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sql">
+            <value>
+                <![CDATA[
+                insert into yalamanchili.tutorials(id, author, title, date, icon, description)
+                    value (:tutorial_id, :author, :title, :date, :icon, :description);
+                ]]>
+            </value>
+        </property>
+        <property name="itemSqlParameterSourceProvider">
+            <bean class="org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider" />
+        </property>
+    </bean>
+
+    <batch:job id="xmlToSqlJob" >
+        <batch:step id="step1">
+            <batch:tasklet>
+                <batch:chunk commit-interval="10" reader="xmlItemReader" writer="sqlItemWriter" processor="itemProcessor" />
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+</beans>

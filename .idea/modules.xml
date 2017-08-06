@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringBatch.iml" filepath="$PROJECT_DIR$/SpringBatch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/basicBatchApp/basicBatchApp.iml" filepath="$PROJECT_DIR$/basicBatchApp/basicBatchApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/csvToXmlBatchApp/csvToXmlBatchApp.iml" filepath="$PROJECT_DIR$/csvToXmlBatchApp/csvToXmlBatchApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xmlToMySqlDBBatchApp/xmlToMySqlDBBatchApp.iml" filepath="$PROJECT_DIR$/xmlToMySqlDBBatchApp/xmlToMySqlDBBatchApp.iml" />
+    </modules>
+  </component>
+</project>
